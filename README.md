@@ -9,6 +9,6 @@ A simple Todo List app created using React and Styled Components.
 
 # Acknowledgements
 - React
-- Styled Components*
+- Styled Components
 
 # Feel free to contribute and add more features to this app!
