@@ -10,6 +10,14 @@ const TodoContainer = styled.div`
   border-radius: 10px;
   box-shadow: 0px 15px 64px 39px rgba(150, 150, 150, 0.42);
   overflow-y: scroll;
+
+  @media (min-width: 375px) and (max-width: 812px) {
+    width: 350px;
+    height: 635px;
+    padding: 5px 20px;
+    overflow-x: auto;
+  }
+
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -52,6 +60,9 @@ const List = styled.li`
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
+  @media (min-width: 375px) and (max-width: 812px) {
+    width: 300px;
+  }
 `;
 
 const Input = styled.input`
@@ -62,6 +73,9 @@ const Input = styled.input`
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   &:focus {
     outline: none;
+  }
+  @media (min-width: 375px) and (max-width: 812px) {
+    width: 200px;
   }
 `;
 
@@ -116,6 +130,12 @@ const GlobalStyles = createGlobalStyle`
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+
+    @media (min-width: 375px) and (max-width: 812px) {
+      padding: 20px 5px;
+      width: 100%;
+      overflow-x: auto;
+    }
   }
 
   .Mark{
