@@ -1,4 +1,4 @@
-# Todo List App
+# Todo List App (created from scratch)
 A simple Todo List app created using React and Styled Components.
 
 # Features
