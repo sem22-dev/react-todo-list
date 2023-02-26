@@ -1,5 +1,5 @@
 import React from "react";
-import {TodoContainer, TodoHeader, ListContainer, List, Input, Button, AddInput, DeleteButton} from "../styles/todolist.js"
+import {TodoContainer, TodoHeader, ListContainer, List, Input, Button, AddInput, DeleteButton, Button2, SmallText } from "../styles/todolist.js"
 
 export default function TodoList() {
     const [todoItems, setTodoItems] = React.useState([]);
@@ -11,7 +11,15 @@ export default function TodoList() {
 
     function addTodoItem() {
         if (inputValue.trim() !== '') {
-            setTodoItems(prevItems => ([...prevItems, inputValue]));
+            setTodoItems(prevItems =>
+            ([...prevItems, {text : inputValue, timeStamp:  new Date().toLocaleString('en-US',
+                        { hour: 'numeric',
+                        minute: 'numeric',
+                        hour12: true,
+                        day: "2-digit",
+                        month: 'short',
+                        year: 'numeric',
+                   })}]));
             setInputValue('');
         }
     }
@@ -40,6 +48,10 @@ export default function TodoList() {
       }, [todoItems]);
 
 
+      function clearAllItems() {
+        setTodoItems([]);
+    }
+
     return(
         <TodoContainer>
             <TodoHeader>Todo List</TodoHeader>
@@ -50,13 +62,20 @@ export default function TodoList() {
             <ListContainer>
                 {todoItems.map((item, index) => {
                     return (
-                        <List key={index}>
-                           {item}
-                            <DeleteButton onClick={() => deleteTodoItem(index)}>x</DeleteButton>
-                        </List>
+                        <React.Fragment key={index}>
+                            <SmallText>{item.timeStamp}</SmallText>
+                            <List>
+                                {item.text}
+                                <DeleteButton onClick={() => deleteTodoItem(index)}>x</DeleteButton>
+                            </List>
+                        </React.Fragment>
                     )
                 })}
+                {todoItems.length > 4 &&
+                    <Button2 todoItems={todoItems} onClick={clearAllItems}>Clear All</Button2>
+                }
             </ListContainer>
         </TodoContainer>
     )
+
 }

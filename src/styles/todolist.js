@@ -93,6 +93,23 @@ const Button = styled.button`
   }
 `;
 
+ const Button2 = styled.button`
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #3e8e41;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #3e8e41;
+  }
+  position: fixed;
+  bottom:50px;
+  box-shadow: 0px 9px 48px -2px rgba(6, 4, 4, 0.48)
+`
+
 const AddInput = styled.div`
   display: flex;
   align-items: center;
@@ -111,6 +128,16 @@ const DeleteButton = styled.button`
     background-color: #c62828;
   }
 `;
+
+const SmallText = styled.small`
+  margin: 0px 0px 3px 310px;
+  color: white;
+  font-size: 0.7em;
+  @media (min-width: 375px) and (max-width: 812px) {
+    width: 200px;
+    font-size: 0.6em;
+  }
+  `
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -155,5 +182,7 @@ export {
   Button,
   AddInput,
   DeleteButton,
+  Button2,
+  SmallText,
   GlobalStyles,
 };
