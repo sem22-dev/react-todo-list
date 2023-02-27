@@ -66,7 +66,7 @@ const List = styled.li`
 `;
 
 const Input = styled.input`
-  width: 330px;
+  width: 380px;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -122,14 +122,14 @@ const AddInput = styled.div`
 const DeleteButton = styled.button`
   padding:5px 10px;
   margin-left: 10px;
-  background-color: #f44336;
-  color: #fff;
+  background-color: transparent;
+  color: red;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
   &:hover {
-    background-color: #c62828;
+    background-color: #fff;
   }
 `;
 
@@ -163,7 +163,7 @@ const GlobalStyles = createGlobalStyle`
     margin-top: 50px;
 
     @media (min-width: 375px) and (max-width: 812px) {
-      padding: 20px 5px;
+      padding: 20px 15px;
       width: 100%;
     }
   }
@@ -175,7 +175,7 @@ const GlobalStyles = createGlobalStyle`
     color: white;
     @media (min-width: 375px) and (max-width: 812px) {
     position: static;
-    float: right;
+    transform: translateX(80%) translateY(3900%);
   }
   }
 `;

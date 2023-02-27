@@ -58,7 +58,7 @@ export default function TodoList() {
             <TodoHeader>Todo List</TodoHeader>
             <AddInput>
                 <Input value={inputValue} onChange={updateInputValue} onKeyPress={handleKeyPress} />
-                <Button onClick={addTodoItem}>Add Item</Button>
+                <Button onClick={addTodoItem}><i class="fa-solid fa-plus"></i></Button>
             </AddInput>
             <ListContainer>
                 {todoItems.map((item, index) => {
@@ -67,7 +67,7 @@ export default function TodoList() {
                             <SmallText>{item.timeStamp}</SmallText>
                             <List>
                                 {item.text}
-                                <DeleteButton onClick={() => deleteTodoItem(index)}>x</DeleteButton>
+                                <DeleteButton onClick={() => deleteTodoItem(index)}><i class="fa-solid fa-trash"></i></DeleteButton>
                             </List>
                         </React.Fragment>
                     )
