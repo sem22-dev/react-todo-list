@@ -15,7 +15,7 @@ const TodoContainer = styled.div`
     width: 350px;
     height: 635px;
     padding: 5px 20px;
-    overflow-x: auto;
+    overflow-x: hidden;
   }
 
   ::-webkit-scrollbar {
@@ -107,7 +107,11 @@ const Button = styled.button`
   }
   position: fixed;
   bottom:50px;
-  box-shadow: 0px 9px 48px -2px rgba(6, 4, 4, 0.48)
+  box-shadow: 0px 9px 48px -2px rgba(6, 4, 4, 0.48);
+
+  @media (min-width: 375px) and (max-width: 812px) {
+    position: static
+  }
 `
 
 const AddInput = styled.div`
@@ -161,7 +165,6 @@ const GlobalStyles = createGlobalStyle`
     @media (min-width: 375px) and (max-width: 812px) {
       padding: 20px 5px;
       width: 100%;
-      overflow-x: auto;
     }
   }
 
@@ -170,6 +173,10 @@ const GlobalStyles = createGlobalStyle`
     right: 20px;
     bottom: 20px;
     color: white;
+    @media (min-width: 375px) and (max-width: 812px) {
+    position: static;
+    float: right;
+  }
   }
 `;
 
