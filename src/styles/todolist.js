@@ -1,15 +1,18 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 const TodoContainer = styled.div`
-  background-color: #447572;
+  background-color: ${props => props.isDark ? props.theme.backgroundColorContainer : props.theme.backgroundColorContainer};
   width: 500px;
   height:550px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  box-shadow: 0px 15px 64px 39px rgba(150, 150, 150, 0.42);
+  box-shadow: ${props => props.isDark ? "0px 6px 57px 9px rgba(150, 150, 150, 0.44)" : "0px 15px 64px 39px rgba(150, 150, 150, 0.42)"};
+
+
   overflow-y: scroll;
+  position: relative;
 
   @media (min-width: 375px) and (max-width: 812px) {
     width: 350px;
@@ -32,6 +35,11 @@ const TodoContainer = styled.div`
   }
 `;
 
+const HeaderContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 const TodoHeader = styled.h2`
   margin:30px 0;
   font-size: 2rem;
@@ -51,12 +59,14 @@ const ListContainer = styled.ul`
 
 const List = styled.li`
   display: flex;
+  color: ${props => props.isDark ? props.theme.fontColor : props.theme.fontColor};
+  border : ${props => props.isDark ? props.theme.border : props.theme.border };
   align-items: center;
   justify-content: space-between;
   width: 430px;
   padding: 7px;
   margin-bottom: 10px;
-  background-color: #fff;
+  background-color: ${props => props.isDark ? props.theme.liBackground : props.theme.liBackground};
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
@@ -91,6 +101,20 @@ const Button = styled.button`
   &:hover {
     background-color: #3e8e41;
   }
+  &.night{
+    position: absolute;
+    right: 30px;
+    border-radius: 50%;
+    background-color: ${props => props.isDark ? props.theme.nightBackground : props.theme.nightBackground};
+    color: ${props => props.isDark ? props.theme.nightColo : props.theme.nightColo};
+    width: 30px ;
+    height: 30px;
+    padding: 2px ;
+    @media (min-width: 375px) and (max-width: 812px) {
+    width: 25px;
+    height: 25px;
+  }
+  }
 `;
 
  const Button2 = styled.button`
@@ -106,7 +130,7 @@ const Button = styled.button`
     background-color: #3e8e41;
   }
   position: fixed;
-  bottom:50px;
+  bottom:70px;
   box-shadow: 0px 9px 48px -2px rgba(6, 4, 4, 0.48);
 
   @media (min-width: 375px) and (max-width: 812px) {
@@ -123,7 +147,7 @@ const DeleteButton = styled.button`
   padding:5px 10px;
   margin-left: 10px;
   background-color: transparent;
-  color: red;
+  color: ${props => props.isDark ? props.theme.deleteColor : props.theme.deleteColor};
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -153,14 +177,14 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: #658491;
+    background-color: ${props => props.isDark ? props.theme.bodyBackground : props.theme.backgroundColorContainer};
     color: #333;
     font-family: sans-serif;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 30px;
 
     @media (min-width: 375px) and (max-width: 812px) {
       padding: 20px 15px;
@@ -192,5 +216,6 @@ export {
   DeleteButton,
   Button2,
   SmallText,
+  HeaderContainer,
   GlobalStyles,
 };

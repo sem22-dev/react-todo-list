@@ -1,8 +1,8 @@
 import React from "react";
-import {TodoContainer, TodoHeader, ListContainer, List, Input, Button, AddInput, DeleteButton, Button2, SmallText } from "../styles/todolist.js"
+import {TodoContainer, TodoHeader, ListContainer, List, Input, Button, AddInput, DeleteButton, Button2, SmallText, HeaderContainer } from "../styles/todolist.js"
 
 
-export default function TodoList() {
+export default function TodoList(props) {
     const [todoItems, setTodoItems] = React.useState([]);
     const [inputValue, setInputValue] = React.useState('');
 
@@ -54,8 +54,11 @@ export default function TodoList() {
     }
 
     return(
-        <TodoContainer>
-            <TodoHeader>Todo List</TodoHeader>
+        <TodoContainer isDark={props.isDark}>
+            <HeaderContainer>
+                <TodoHeader>Todo List </TodoHeader>
+                <Button onClick={props.handleToggle} className="night"><i class="fa-solid fa-cloud-moon"></i></Button>
+                </HeaderContainer>
             <AddInput>
                 <Input value={inputValue} onChange={updateInputValue} onKeyPress={handleKeyPress} />
                 <Button onClick={addTodoItem}><i class="fa-solid fa-plus"></i></Button>
