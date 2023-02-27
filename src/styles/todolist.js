@@ -113,6 +113,7 @@ const Button = styled.button`
     @media (min-width: 375px) and (max-width: 812px) {
     width: 30px;
     height: 30px;
+    padding: 2px;
   }
   }
 `;
