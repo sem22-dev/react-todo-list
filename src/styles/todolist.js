@@ -84,6 +84,10 @@ const Input = styled.input`
   &:focus {
     outline: none;
   }
+  ::placeholder {
+  opacity: 0.4;
+}
+
   @media (min-width: 375px) and (max-width: 812px) {
     width: 250px;
   }
@@ -130,8 +134,6 @@ const Button = styled.button`
   &:hover {
     background-color: #3e8e41;
   }
-  position: fixed;
-  bottom:70px;
   box-shadow: 0px 9px 48px -2px rgba(6, 4, 4, 0.48);
 
   @media (min-width: 375px) and (max-width: 812px) {

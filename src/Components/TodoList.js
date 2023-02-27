@@ -60,7 +60,7 @@ export default function TodoList(props) {
                 <Button onClick={props.handleToggle} className="night"><i class="fa-solid fa-cloud-moon"></i></Button>
                 </HeaderContainer>
             <AddInput>
-                <Input value={inputValue} onChange={updateInputValue} onKeyPress={handleKeyPress} />
+                <Input placeholder="New task" value={inputValue} onChange={updateInputValue} onKeyPress={handleKeyPress} />
                 <Button onClick={addTodoItem}><i class="fa-solid fa-plus"></i></Button>
             </AddInput>
             <ListContainer>
@@ -75,7 +75,7 @@ export default function TodoList(props) {
                         </React.Fragment>
                     )
                 })}
-                {todoItems.length > 4 &&
+                {todoItems.length >= 3 &&
                     <Button2 todoItems={todoItems} onClick={clearAllItems}>Clear All</Button2>
                 }
             </ListContainer>
