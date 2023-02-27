@@ -75,7 +75,7 @@ const Input = styled.input`
     outline: none;
   }
   @media (min-width: 375px) and (max-width: 812px) {
-    width: 200px;
+    width: 250px;
   }
 `;
 
@@ -175,7 +175,8 @@ const GlobalStyles = createGlobalStyle`
     color: white;
     @media (min-width: 375px) and (max-width: 812px) {
     position: static;
-    transform: translateX(80%) translateY(3900%);
+      color: gray;
+      margin-bottom: 10px;
   }
   }
 `;
