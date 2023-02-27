@@ -6,7 +6,7 @@ Live demo here : https://react-todo-list-sem.netlify.app/
 # Features
 - Add new items to the list
 - Delete items from the list
-- Save the list to local storage
+- Keep track and display the actual time and date of the tasks you wrote
 - Retrieve the list from local storage on page reload
 
 # Acknowledgements
