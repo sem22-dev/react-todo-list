@@ -103,16 +103,16 @@ const Button = styled.button`
   }
   &.night{
     position: absolute;
-    right: 30px;
+    right: 35px;
+    top:35px;
     border-radius: 50%;
-    background-color: ${props => props.isDark ? props.theme.nightBackground : props.theme.nightBackground};
-    color: ${props => props.isDark ? props.theme.nightColo : props.theme.nightColo};
-    width: 30px ;
-    height: 30px;
-    padding: 2px ;
+    background-color: transparent;
+    color: ${props => props.isDark ? props.theme.nightColor : props.theme.nightColor};
+    width: 40px ;
+    height: 40px;
     @media (min-width: 375px) and (max-width: 812px) {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
   }
 `;

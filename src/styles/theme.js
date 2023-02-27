@@ -4,7 +4,6 @@ export const lightTheme = {
   liBackground : "#fff",
   fontColor:"#000",
   border: "none",
-  nightBackground: "#4caf50",
   nigthColor: "#fff",
   deleteColor: "#FF4136"
 }
@@ -14,7 +13,6 @@ export const darkTheme = {
     liBackground : "#000",
     fontColor:"#fff",
     border : "1px solid #fff",
-    nightBackground: "#000",
     nightColor: "#FFD369",
-    deleteColor: "#3e8e41"
+    deleteColor: "#fff"
 }
