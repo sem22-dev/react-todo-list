@@ -1,6 +1,8 @@
 # Todo List App (created from scratch)
 A simple Todo List app created using React and Styled Components.
 
+Live demo here : https://react-todo-list-sem.netlify.app/
+
 # Features
 - Add new items to the list
 - Delete items from the list
