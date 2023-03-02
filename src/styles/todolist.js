@@ -1,14 +1,14 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 const TodoContainer = styled.div`
-  background-color: ${props => props.isDark ? props.theme.backgroundColorContainer : props.theme.backgroundColorContainer};
+  background-color: ${props => props.theme.backgroundColorContainer};
   width: 500px;
   height:550px;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  box-shadow: ${props => props.isDark ? "0px 6px 57px 9px rgba(150, 150, 150, 0.44)" : "0px 15px 64px 39px rgba(150, 150, 150, 0.42)"};
+  box-shadow: ${props => props.isDark ? "0px 6px 57px 9px rgba(150, 150, 150, 0.44)" : ""};
 
 
   overflow-y: scroll;
@@ -59,14 +59,14 @@ const ListContainer = styled.ul`
 
 const List = styled.li`
   display: flex;
-  color: ${props => props.isDark ? props.theme.fontColor : props.theme.fontColor};
-  border : ${props => props.isDark ? props.theme.border : props.theme.border };
+  color: ${props => props.theme.fontColor};
+  border : ${props => props.theme.border };
   align-items: center;
   justify-content: space-between;
   width: 430px;
   padding: 7px;
   margin-bottom: 10px;
-  background-color: ${props => props.isDark ? props.theme.liBackground : props.theme.liBackground};
+  background-color: ${props => props.theme.liBackground};
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
@@ -111,7 +111,7 @@ const Button = styled.button`
     top:35px;
     border-radius: 50%;
     background-color: transparent;
-    color: ${props => props.isDark ? props.theme.nightColor : props.theme.nightColor};
+    color: ${props => props.theme.nightColor};
     width: 40px ;
     height: 40px;
     @media (min-width: 375px) and (max-width: 812px) {
@@ -150,7 +150,7 @@ const DeleteButton = styled.button`
   padding:5px 10px;
   margin-left: 10px;
   background-color: transparent;
-  color: ${props => props.isDark ? props.theme.deleteColor : props.theme.deleteColor};
+  color: ${props => props.theme.deleteColor};
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -180,7 +180,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background-color: ${props => props.isDark ? props.theme.bodyBackground : props.theme.backgroundColorContainer};
+    background-color: ${props => props.theme.bodyBg};
     color: #333;
     font-family: sans-serif;
     font-size: 16px;

@@ -5,7 +5,8 @@ export const lightTheme = {
   fontColor:"#000",
   border: "none",
   nigthColor: "#fff",
-  deleteColor: "#FF4136"
+  deleteColor: "#FF4136",
+  bodyBg: "#fff"
 }
 
 export const darkTheme = {
@@ -14,5 +15,6 @@ export const darkTheme = {
     fontColor:"#fff",
     border : "1px solid #fff",
     nightColor: "#FFD369",
-    deleteColor: "#fff"
+    deleteColor: "#fff",
+    bodyBg: "#4C5057"
 }
